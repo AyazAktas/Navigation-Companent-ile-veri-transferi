@@ -1,6 +1,7 @@
 package com.example.navigationcompanent
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -32,5 +33,21 @@ class AnasayfaFragment : Fragment() {
 
         return binding.root
     }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        Log.e("Yaşam Döngüsü","onCreate") //uygulama çalıştığında bir kere
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.e("Yaşam Döngüsü","onPause")// sayfa geçişi yaptığında ana sayfa görünmez halde olduğu için pause
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("Yaşam Döngüsü","OnResume")// sayfa göründüğü zaman çalışır.
+    }
+
 
 }

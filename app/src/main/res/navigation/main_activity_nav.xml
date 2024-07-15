@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_anasayfa" >
         <action
             android:id="@+id/detayGecis"
-            app:destination="@id/detayFragment" />
+            app:destination="@id/detayFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/detayFragment"
@@ -35,4 +36,9 @@
             android:name="urun"
             app:argType="com.example.navigationcompanent.Urunler" />
     </fragment>
+    <fragment
+        android:id="@+id/ayarlarFragment"
+        android:name="com.example.navigationcompanent.AyarlarFragment"
+        android:label="fragment_ayarlar"
+        tools:layout="@layout/fragment_ayarlar" />
 </navigation>
