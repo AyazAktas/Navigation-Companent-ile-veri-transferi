@@ -31,6 +31,10 @@ class AnasayfaFragment : Fragment() {
             // veri alan args , ana sayfa ise directions ekini alır
         }
 
+        binding.buttonGoster.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.bottomSheetgecis )
+        }
+
         return binding.root
     }
 
